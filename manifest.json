@@ -1,0 +1,20 @@
+{
+  "manifest_version": 2,
+
+  "name": "Browser Pal",
+  "description": "This extension shows a Google Image search result for the current page",
+  "version": "1.0.0",
+
+  "browser_action": {
+    "default_icon": "icon.png",
+    "icons": {
+      "16" : "icon.png",
+      "48" : "icon.png",
+      "128" : "icon.png"},
+    "default_popup": "main.html"
+  },
+  "permissions": [
+    "activeTab",
+    "https://ajax.googleapis.com/"
+  ]
+}
