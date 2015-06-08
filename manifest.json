@@ -5,6 +5,14 @@
   "description": "This extension shows a Google Image search result for the current page",
   "version": "1.0.0",
 
+  "background": {
+    "scripts": ["thirdParty/jquery-2.0.3.js","index.js"]
+  },
+
+  "background": {
+    "page": "background.html"
+  },
+
   "browser_action": {
     "default_icon": "icon.png",
     "icons": {
@@ -16,5 +24,11 @@
   "permissions": [
     "activeTab",
     "https://ajax.googleapis.com/"
-  ]
+  ],
+
+  "content_scripts": [ {
+    "js": [ "jquery-2.1.4.min.js", "background.js" ],
+    "matches": [ "http://*/*", "https://*/*"]
+  }]
+
 }

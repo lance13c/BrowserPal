@@ -6,6 +6,8 @@
  -->
 <html>
     <head>
+      <script src="index.js"></script>
+      <script src="jquery-2.1.4.min.js"></script>
       <title>Browser Pal</title>
       <style>
         body {
@@ -17,8 +19,8 @@
             white-space: pre;
             text-overflow: ellipsis;
             overflow: hidden;
-            max-width: 100px;
-            max-height: 150px;
+            min-width: 200px;
+            min-height: 300px;
         }
       </style>
 
@@ -28,11 +30,17 @@
         -
         - [1]: https://developer.chrome.com/extensions/contentSecurityPolicy
        -->
-      <script src="main.js"></script>
+
     </head>
+
     <body>
-        <div id="status"></div>
-        <img id="image-result" hidden>
+        <canvas id="myCanvas" width="300" height="200"></canvas>
+
+        <div id="status">Something</div>
+        <img src="" id="image-result">
+        <script type="text/javascript">
+            init();
+            drawAvatars();
+        </script>
     </body>
 </html>
-

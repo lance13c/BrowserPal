@@ -8,6 +8,17 @@
  * @param {function(string)} callback - called when the URL of the current tab
  *   is found.
  **/
+
+
+var URL_IMAGE_LIST = ["http://opengameart.org/sites/default/files/S31-Scientists-01_0.png","http://opengameart.org/sites/default/files/styles/medium/public/S31-Scientists-02_0.png",
+  "http://opengameart.org/sites/default/files/styles/medium/public/S31-Dark%20Force-03_0.png","http://opengameart.org/sites/default/files/styles/medium/public/S31-Dark%20Force-02_0.png",
+  "http://opengameart.org/sites/default/files/styles/medium/public/S31-Dark%20Force-01_0.png","http://opengameart.org/sites/default/files/styles/medium/public/S31-Civilians-05_0.png",
+  "http://opengameart.org/sites/default/files/styles/medium/public/S31-Civilians-05_0.png","http://opengameart.org/sites/default/files/styles/medium/public/S31-Civilians-06.png",
+  "http://opengameart.org/sites/default/files/styles/medium/public/S31-Civilians-07_0.png","http://opengameart.org/sites/default/files/styles/medium/public/S31-Civilians-08_0.png",
+  "http://opengameart.org/sites/default/files/styles/medium/public/S31-Civilians-04_0.png","http://opengameart.org/sites/default/files/styles/medium/public/S31-Civilians-03_0.png",
+  "http://opengameart.org/sites/default/files/styles/medium/public/S31-Civilians-02_0.png","http://opengameart.org/sites/default/files/styles/medium/public/S31-Civilians-01_0.png"];
+
+
 function getCurrentTabUrl(callback) {
   // Query filter to be passed to chrome.tabs.query - see
   // https://developer.chrome.com/extensions/tabs#method-query
@@ -116,3 +127,19 @@ document.addEventListener('DOMContentLoaded', function() {
     });
   });
 });
+
+/**
+ * Displays the avatars/characters the person could be
+ */
+function displayCharacters() {
+  var img = document.createElement(URL_IMAGE_LIST[0]);
+  img.style.width = '20%';
+  img.style.height = '30%';
+
+  var imageResult = document.getElementById('image-result');
+
+  imageResult.width = img.style.getPropertyValue('width');
+  imageResult.height = img.style.getPropertyValue('height');
+  imageResult.src = img.src;
+  imageResult.hidden = false;
+}
