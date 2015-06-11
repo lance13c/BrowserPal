@@ -10,7 +10,7 @@
   },
 
   "background": {
-    "page": "background.html"
+    "page": "js/background.html"
   },
 
   "browser_action": {
@@ -27,7 +27,7 @@
   ],
 
   "content_scripts": [ {
-    "js": [ "jquery-2.1.4.min.js", "background.js" ],
+    "js": [ "jquery-2.1.4.min.js", "js/background.js" ],
     "matches": [ "http://*/*", "https://*/*"]
   }]
 

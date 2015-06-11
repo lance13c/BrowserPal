@@ -6,8 +6,10 @@
  -->
 <html>
     <head>
-      <script src="index.js"></script>
+      <script src="js/avatar.js"></script>
       <script src="jquery-2.1.4.min.js"></script>
+      <script src="js/avatar.js"></script>
+
       <title>Browser Pal</title>
       <style>
         body {
@@ -34,13 +36,10 @@
     </head>
 
     <body>
-        <canvas id="myCanvas" width="300" height="200"></canvas>
+        <canvas id="myCanvas" width="600" height="600"></canvas>
 
         <div id="status">Something</div>
         <img src="" id="image-result">
-        <script type="text/javascript">
-            init();
-            drawAvatars();
-        </script>
+        <script type="text/javascript" src="js/createAvatarPreview.js"></script>
     </body>
 </html>
