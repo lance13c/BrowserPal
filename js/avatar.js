@@ -62,8 +62,14 @@ SpriteSet.prototype = {
         var actualY = Math.floor(index / 3)*SPRITE_HEIGHT;
 
         ctx.drawImage(this.image,actualX+this.imageX,actualY+this.imageY,SPRITE_WIDTH,SPRITE_HEIGHT,x,y,SPRITE_WIDTH,SPRITE_HEIGHT);
+    },
+    test: function(){
+        ctx.rect(this.x,this.y,this.x/2,this.y/2);
     }
 };
+
+//SpriteSet.addEventListener("mouseover",test());
+
 
 /**
  * Draws a preview of all avatars that can be chosen from
