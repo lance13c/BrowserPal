@@ -7,39 +7,30 @@
 <html>
     <head>
       <script src="js/avatar.js"></script>
-      <script src="jquery-2.1.4.min.js"></script>
+      <script src="dependencies/jquery-2.1.4.min.js"></script>
+      <script src="dependencies/underscore.js"></script>
+      <script src="dependencies/backbone.js"/>
       <script src="js/avatar.js"></script>
+      <link rel="stylesheet" type="text/css" href="style.css">
 
       <title>Browser Pal</title>
-      <style>
-        body {
-          font-family: "Segoe UI", "Lucida Grande", Tahoma, sans-serif;
-          font-size: 100%;
-        }
-        #status {
-          /* avoid an excessively wide status text */
-            white-space: pre;
-            text-overflow: ellipsis;
-            overflow: hidden;
-            min-width: 200px;
-            min-height: 300px;
-        }
-      </style>
-
-      <!--
-        - JavaScript and HTML must be in separate files: see our Content Security
-        - Policy documentation[1] for details and explanation.
-        -
-        - [1]: https://developer.chrome.com/extensions/contentSecurityPolicy
-       -->
-
     </head>
 
     <body>
-        <canvas id="myCanvas" width="600" height="600"></canvas>
+    <!-- Avatar.js is what adds the avatar image -->
+        <script src="js/avatar.js"/>
 
-        <div id="status">Something</div>
-        <img src="" id="image-result">
-        <script type="text/javascript" src="js/createAvatarPreview.js"></script>
+        <div id="stats">
+             <script type="text/template" id="status-template"></script>
+        </div>
+
+        <div id="preview-avatar" class="hidden">
+
+            Should not see
+            Note: Just modify or add a cavas here
+            <!-- canvas used to display preview list of avatars -->
+            <canvas id="myCanvas" width="80" height="40"></canvas>
+        </div>
+
     </body>
 </html>
