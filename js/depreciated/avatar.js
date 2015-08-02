@@ -141,7 +141,7 @@ var getSpriteChooseArray = function(links,spriteNum){
     var spriteArray = [];
     links.forEach(function (currentLink){
         img = new Image();
-        img.src = currentLink;
+        img.js = currentLink;
         imageArray.push(img);
 
         img.onload = function() {
@@ -202,7 +202,7 @@ var getImages = function(links,callback){
     var imagesLoaded = 0;
     links.forEach(function (currentLink){
         img = new Image();
-        img.src = currentLink;
+        img.js = currentLink;
         imageArray.push(img);
 
         img.onload = function() {
