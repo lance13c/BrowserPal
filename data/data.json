@@ -1,0 +1,19 @@
+{
+  "avatar" : {
+    "image" : "url",
+    "stats" : {
+      "stat_health" : "0",
+      "stat_armor" : "0",
+      "stat_magic" : "0",
+      "stat_magic_armor" : "0",
+      "stat_agility" : "0",
+      "stat_health" : "0",
+      "stat_str" : "0",
+      "stat_dex" : "0",
+      "stat_con" : "0",
+      "stat_int" : "0",
+      "stat_wis" : "0",
+      "stat_cha" : "0"
+    }
+  }
+}
